@@ -241,7 +241,7 @@ nav {
 .home-heading{
     font-family: "Noto Serif Devanagari", serif;
     line-height: 150%;
-    color: rgb(0, 0, 71);
+    color: rgb(255, 255, 255);
     font-size: 40px;
     font-style: normal;
     font-weight: bolder;
@@ -258,7 +258,7 @@ nav {
     width: 50px;
     height: 3px;
     border-radius: 2px;
-    background-color: rgb(0, 0, 71);
+    background-color: rgb(255, 68, 0);
 }
 .contents{
     /* background-color: aqua; */
@@ -282,7 +282,7 @@ nav {
     /* background-color: aqua; */
 }
 .small-text-home{
-    color: rgb(0, 0, 71);
+    color: rgb(255, 255, 255);
     font-size: 13px;
 }
 .welcome-button button {
