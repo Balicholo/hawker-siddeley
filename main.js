@@ -49,57 +49,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// TESTIMONIAL CARDS
-// document.addEventListener("DOMContentLoaded", () => {
-//   const testimonials = [
-//     {
-//       name: "Mercy",
-//       text: "Working with Hawker Siddeley has been a game-changer for our projects. Their technical expertise, attention to detail, and commitment to delivering on time exceeded our expectations. From precision machining to reliable solutions, they've become an invaluable partner for our operations.",
-//     },
-//     {
-//       name: "John",
-//       text: "Hawker Siddeley consistently delivers exceptional results. Their innovative approaches and expert team have elevated our operations, making complex tasks seem effortless. A reliable and professional partner.",
-//     },
-//     {
-//       name: "Tinashe",
-//       text: "The team at Hawker Siddeley has set a new standard in service and quality. From consultation to execution, every step has been seamless, professional, and efficient.",
-//     },
-//   ];
-
-//   const nameElement = document.getElementById("testimonial-name");
-//   const textElement = document.getElementById("testimonial-text");
-//   const leftButton = document.getElementById("nav-left");
-//   const rightButton = document.getElementById("nav-right");
-
-//   let currentIndex = 0;
-
-//   const updateTestimonial = () => {
-//     nameElement.textContent = testimonials[currentIndex].name;
-//     textElement.textContent = testimonials[currentIndex].text;
-
-//     // Disable buttons at the ends
-//     leftButton.style.color = currentIndex === 0 ? "grey" : "rgb(255, 68, 0)";
-//     rightButton.style.color =
-//       currentIndex === testimonials.length - 1 ? "grey" : "rgb(255, 68, 0)";
-//   };
-
-//   leftButton.addEventListener("click", () => {
-//     if (currentIndex > 0) {
-//       currentIndex--;
-//       updateTestimonial();
-//     }
-//   });
-
-//   rightButton.addEventListener("click", () => {
-//     if (currentIndex < testimonials.length - 1) {
-//       currentIndex++;
-//       updateTestimonial();
-//     }
-//   });
-
-//   // Initial setup
-//   updateTestimonial();
-// });
 document.addEventListener("DOMContentLoaded", () => {
   const testimonials = [
     {
