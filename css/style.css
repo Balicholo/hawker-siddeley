@@ -861,10 +861,10 @@ nav {
     color: orangered;
     cursor: pointer;
 }
-.contact-wrapper a .email-button{
+/* .contact-wrapper a .email-button{
     background-color: rgb(0, 0, 71);
     color: white;
-}
+} */
 .contact-wrapper a button:hover{
     background-color: rgb(255, 68, 0);
     color: white;
