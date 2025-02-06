@@ -47,12 +47,16 @@
         </div>
         <i class="ri-menu-line"></i>
         <ul class="nav-links">
-            <li><a href="#home-section" class="active">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#services-section">Services</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-            <a href="https://wa.link/b4leno"><button>Get A Quote <i class="ri-file-text-line"></i></button></a>
+            <li><a href="#home-section" class="active"><span data-i18n="home">Home</span></a></li>
+            <li><a href="#about-section"><span data-i18n="about">About</span></a></li>
+            <li><a href="#services-section"><span data-i18n="services">Services</span></a></li>
+            <li><a href="#contact-section"><span data-i18n="contact">Contact</span></a></li>
+            <a href="https://wa.link/b4leno"><button><span data-i18n="get-a-quote">Get A Quote</span> <i class="ri-file-text-line"></i> </button></a>
             <p><a href="tel:+258861058118"><i class="ri-phone-fill"></i> +258 861058118</a></p>
+            <select id="language-switcher" onchange="changeLanguage(event)">
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+            </select>
         </ul>
     </div>
     <!-- NAV-MENU ON SMALL SCREEN -->
@@ -63,83 +67,74 @@
                 <div class="logo">
                     <a href="#"><i class="ri-team-fill"></i> Hawker Siddeley <span>Group PLC</span></a>
                 </div>
-                <li><a href="#home-section"><i class="ri-home-4-line"></i> Home</a></li>
-                <li><a href="#about-section"><i class="ri-edit-2-line"></i> About</a></li>
-                <li><a href="#services-section"><i class="ri-tools-fill"></i> Services</a></li>
-                <li><a href="#contact-section"><i class="ri-contacts-book-3-line"></i> Contact</a></li>
-                <a href="tel:+258870210002"><button><i class="ri-file-text-line"></i> Get A Quote</button></a>
+                <li><a href="#home-section"><i class="ri-home-4-line"></i> <span data-i18n="home">Home</span></a></li>
+                <li><a href="#about-section"><i class="ri-edit-2-line"></i> <span data-i18n="about">About</span></a></li>
+                <li><a href="#services-section"><i class="ri-tools-fill"></i> <span data-i18n="services">Services</span></a></li>
+                <li><a href="#contact-section"><i class="ri-contacts-book-3-line"></i> <span data-i18n="contact">Contact</span></a></li>
+                <a href="tel:+258870210002"><button><i class="ri-file-text-line"></i> <span data-i18n="get-a-quote">Get A Quote</span></button></a>
                 <p><a href="tel:+258861058118"><i class="ri-phone-fill"></i> +258 861058118</a></p>
+                <select id="language-switcher" onchange="changeLanguage(event)">
+                  <option value="en">English</option>
+                  <option value="pt">Português</option>
+                </select>
             </ul>
         </div>
     </div>
 </nav>
 
-
-    <section id="home-section">
-     <div class="section-filter">
-       <div class="contents-wrapper">
-         <div class="contents">
-           <h1 class="home-heading">
-            Welcome to Hawker Siddeley Group PLC, a premier engineering firm.
-           </h1>
-           <div class="line"></div>
-           <p class="small-text-home">
-            Our mission is simple yet profound: to engineer a better future. This commitment drives everything we do, from conceptualization to execution.
-           </p>
-
-           <div class="welcome-button">
-            <a href="#why-chosen">
-                <button class="pulse-button">
-                  Explore <i class="ri-footprint-line"></i>
-                </button>
-              </a>
-           </div>
-         </div>
+<section id="home-section">
+ <div class="section-filter">
+   <div class="contents-wrapper">
+     <div class="contents">
+       <h1 class="home-heading"><span data-i18n="welcome">Welcome to Hawker Siddeley Group PLC, a premier engineering firm.</span></h1>
+       <div class="line"></div>
+       <p class="small-text-home"><span data-i18n="mission">Our mission is simple yet profound: to engineer a better future. This commitment drives everything we do, from conceptualization to execution.</span></p>
+       <div class="welcome-button">
+        <a href="#why-chosen">
+            <button class="pulse-button"><i class="ri-footprint-line"></i> <span data-i18n="explore">Explore</span></button>
+          </a>
        </div>
      </div>
-    </section>
-    <section id="why-chosen">
-      <div class="cards-container">
-        <div class="heading-section">
-          <h1>Why People Choose Us</h1>
-          <div class="stylish-line"></div>
-        </div>
-       <div class="cards-wrapper">
-         <div class="card">
-          <i class="ri-shake-hands-line"></i>
-          <div>
-            <h3>Client-Centered Excellence</h3>
-            <p class="why-chosen-text">
-              Your vision is our priority. We collaborate closely with clients to understand their needs, offering tailored engineering solutions and exceptional support to build lasting partnerships.
-            </p>
-            <a href="#services-section"><button>Read More <i class="ri-arrow-right-s-line"></i></button></a>
-          </div>
-         </div>
-<!-- CARD 2 -->
-         <div class="card">
-          <i class="ri-tools-fill"></i>
-          <div>
-            <h3>Unmatched Quality and Reliability</h3>
-            <p class="why-chosen-text">
-              Quality is at the core of everything we do. From concept to completion, we ensure that every detail is meticulously executed, meeting the highest standards and delivering results you can trust.
-            </p>
-            <a href="#services-section"><button>Read More <i class="ri-arrow-right-s-line"></i></button></a>
-          </div>
-         </div>
-<!-- CARD 3 -->
-         <div class="card">
-          <i class="ri-settings-5-fill"></i>
-          <div>
-            <h3>Cutting-Edge Solutions</h3>
-            <p class="why-chosen-text">
-              We combine years of industry experience with innovative technologies to deliver engineering solutions that exceed expectations. Our team of experts brings precision, efficiency, and creativity to every project.
-            </p>
-            <a href="#services-section"><button>Read More <i class="ri-arrow-right-s-line"></i></button></a>
-          </div>
-         </div>
-       </div>
+   </div>
+ </div>
+</section>
+<section id="why-chosen">
+  <div class="cards-container">
+    <div class="heading-section">
+      <h1><span data-i18n="why_choose">Why People Choose Us</span></h1>
+      <div class="stylish-line"></div>
+    </div>
+   <div class="cards-wrapper">
+     <div class="card">
+      <i class="ri-shake-hands-line"></i>
+      <div>
+        <h3><span data-i18n="client_centered">Client-Centered Excellence</span></h3>
+        <p class="why-chosen-text"><span data-i18n="why-chosen-text">Your vision is our priority. We collaborate closely with clients to understand their needs, offering tailored engineering solutions and exceptional support to build lasting partnerships.</span></p>
+        <a href="#services-section"><button><span data-i18n="read-more">Read More</span> <i class="ri-arrow-right-s-line"></i></button></a>
       </div>
-    </section>
+     </div>
+<!-- CARD 2 -->
+     <div class="card">
+      <i class="ri-tools-fill"></i>
+      <div>
+        <h3><span data-i18n="quality_reliability">Unmatched Quality and Reliability</span></h3>
+        <p class="why-chosen-text"><span data-i18n="why-chosen-text1">Quality is at the core of everything we do. From concept to completion, we ensure that every detail is meticulously executed, meeting the highest standards and delivering results you can trust.</span></p>
+        <a href="#services-section"><button><span data-i18n="read-more">Read More</span> <i class="ri-arrow-right-s-line"></i></button></a>
+      </div>
+     </div>
+<!-- CARD 3 -->
+     <div class="card">
+      <i class="ri-settings-5-fill"></i>
+      <div>
+        <h3><span data-i18n="cutting_edge">Cutting-Edge Solutions</span></h3>
+        <p class="why-chosen-text"><span data-i18n="why-chosen-text2">We combine years of industry experience with innovative technologies to deliver engineering solutions that exceed expectations. Our team of experts brings precision, efficiency, and creativity to every project.</span></p>
+        <a href="#services-section"><button><span data-i18n="read-more">Read More</span> <i class="ri-arrow-right-s-line"></i></button></a>
+      </div>
+     </div>
+   </div>
+  </div>
+</section>
+
 
     <section id="about-section">
       <div class="about-container">
@@ -147,19 +142,19 @@
         <div class="about-pic">
           <div class="experience-tag">
             <h2>5+</h2>
-            <h3>years of experience</h4>
+            <h3 data-i18n="experience">years of experience</h4>
           </div>
           <img src="./assets/images/about-img.png" alt="about-img">
         </div>
         <div class="text-wrapper">
          <div class="about-headings">
-          <h1>About Us</h1>
+          <h1 data-i18n="about_us">About Us</h1>
           <div class="stylish-line"></div>
          </div>
-         <h2>Engineering Excellence, Built on Experience and Innovation</h2>
-         <p>Our journey began with a vision to redefine the standards of engineering excellence. With a team of highly skilled engineers we have tackled some of the most complex challenges, delivering innovative solutions that have set new benchmarks in the industry.</p>
-         <p>Our mission is simple yet profound: to engineer a better future. This commitment drives everything we do, from conceptualization to execution, as we strive to create impactful solutions that address the evolving needs of our clients and society at large</p>
-         <a href="#image-section"><button>Read More <i class="ri-arrow-right-s-line"></i></button></a>
+         <h2 data-i18n="engineering_excellence">Engineering Excellence, Built on Experience and Innovation</h2>
+         <p data-i18n="experience-paragraph1">Our journey began with a vision to redefine the standards of engineering excellence. With a team of highly skilled engineers we have tackled some of the most complex challenges, delivering innovative solutions that have set new benchmarks in the industry.</p>
+         <p data-i18n="experience-paragraph2">Our mission is simple yet profound: to engineer a better future. This commitment drives everything we do, from conceptualization to execution, as we strive to create impactful solutions that address the evolving needs of our clients and society at large</p>
+         <a href="#image-section"><button><span data-i18n="read-more">Read More</span> <i class="ri-arrow-right-s-line"></i></button></a>
         </div>
        </div>
       </div>
@@ -169,37 +164,37 @@
     
         <!-- Image Part 1 -->
         <div class="image-part part-1">
-          <h3>Fitting and Turning</h3>
+          <h3 data-i18n="fitting-turning">Fitting and Turning</h3>
           <i class="ri-arrow-right-s-line"></i>
           <div class="image-filter">
-            <p class="img-text">We offer precision machining and assembly solutions to fabricate high-quality components and systems according to customer specifications</p>
+            <p class="img-text" data-i18n="image-text1">We offer precision machining and assembly solutions to fabricate high-quality components and systems according to customer specifications</p>
           </div>
         </div>
     
         <!-- Image Part 2 -->
         <div class="image-part part-2">
-          <h3>Welding</h3>
+          <h3 data-i18n="welding">Welding</h3>
           <i class="ri-arrow-right-s-line"></i>
           <div class="image-filter">
-            <p class="img-text">With a team of highly skilled welders and cutting-edge equipment, we specialize in providing top-quality welding solutions to meet the diverse needs of our clients.</p>
+            <p class="img-text" data-i18n="image-text2">With a team of highly skilled welders and cutting-edge equipment, we specialize in providing top-quality welding solutions to meet the diverse needs of our clients.</p>
           </div>
         </div>
     
         <!-- Image Part 3 -->
         <div class="image-part part-3">
-          <h3>Milling</h3>
+          <h3 data-i18n="milling">Milling</h3>
           <i class="ri-arrow-right-s-line default-icon"></i>
           <div class="image-filter-default">
-            <p class="img-text-default">With a team of experienced machinists, we specialize in providing high-quality milling solutions tailored to meet the unique requirements of our clients.</p>
+            <p class="img-text-default" data-i18n="image-text3">With a team of experienced machinists, we specialize in providing high-quality milling solutions tailored to meet the unique requirements of our clients.</p>
           </div>
         </div>
     
         <!-- Image Part 4 -->
         <div class="image-part part-4">
-          <h3>Metal Spraying</h3>
+          <h3 data-i18n="metal-spraying">Metal Spraying</h3>
           <i class="ri-arrow-right-s-line"></i>
           <div class="image-filter">
-            <p class="img-text">With our expertise in metal spraying techniques and state-of-the-art equipment, we specialize in providing high-quality coatings to enhance the performance.</p>
+            <p class="img-text" data-i18n="image-text4">With our expertise in metal spraying techniques and state-of-the-art equipment, we specialize in providing high-quality coatings to enhance the performance.</p>
           </div>
         </div>
     
@@ -209,7 +204,7 @@
     <section id="services-section">
       <div class="services-section-container">
         <div class="heading-section">
-          <h1>Our Services</h1>
+          <h1 data-i18n="services_section">Our Services</h1>
           <div class="stylish-line"></div>
         </div>
        <div class="services-section-wrapper">
@@ -217,8 +212,8 @@
           <div class="card--filter">
           <i class="fi fi-rs-truck-tow"></i>
           <div>
-            <h3>Crane Hiring</h3>
-            <p class="why-chosen-text">
+            <h3 data-i18n="crane-hiring">Crane Hiring</h3>
+            <p class="why-chosen-text" data-i18n="crane-hiring-text">
               No matter how small or complex the job is, whether you require a single lift, or need to deliver a major project, we
               provide the correct cranes to do the job safely and efficiency
             </p>
@@ -230,12 +225,12 @@
           <div class="card--filter">
           <i class="fi fi-rs-settings"></i>
           <div>
-            <h3>We Supply for</h3>
+            <h3 data-i18n="we-supply-for">We Supply for</h3>
           <ol>
-            <li class="why-chosen-text">Day to Day hire</li>
-            <li class="why-chosen-text">Long Term hire</li>
-            <li class="why-chosen-text">Infrastructure Projects</li>
-            <li class="why-chosen-text">Turn-Around [shutdowns]</li>
+            <li class="why-chosen-text" data-i18n="day-to-day-hire">Day to Day hire</li>
+            <li class="why-chosen-text" data-i18n="long-term-hire">Long Term hire</li>
+            <li class="why-chosen-text" data-i18n="infrastructure-projects">Infrastructure Projects</li>
+            <li class="why-chosen-text" data-i18n="turn-around">Turn-Around [shutdowns]</li>
           </ol>
           </div>            
           </div>
@@ -245,13 +240,13 @@
           <div class="card--filter">
           <i class="fi fi-rs-excavator"></i>
           <div>
-            <h3>Cranes For Hire</h3>
+            <h3 data-i18n="cranes-for-hire">Cranes For Hire</h3>
           <ol>
-            <li class="why-chosen-text">All Terrain [30-750ton]</li>
-            <li class="why-chosen-text">Truck Mounted [30-60ton]</li>
-            <li class="why-chosen-text">Rough Terrain [15-50ton]</li>
-            <li class="why-chosen-text">Contruction & Crawler [100-1200ton]</li>
-            <li class="why-chosen-text">Lattice Boom [750ton]</li>
+            <li class="why-chosen-text" data-i18n="all-terrain">All Terrain [30-750ton]</li>
+            <li class="why-chosen-text" data-i18n="truck-mounted">Truck Mounted [30-60ton]</li>
+            <li class="why-chosen-text" data-i18n="rough-terrain">Rough Terrain [15-50ton]</li>
+            <li class="why-chosen-text" data-i18n="construction-crawler">Contruction & Crawler [100-1200ton]</li>
+            <li class="why-chosen-text" data-i18n="lattice-boom">Lattice Boom [750ton]</li>
           </ol>
           </div>               
           </div>
@@ -261,8 +256,8 @@
           <div class="card--filter">
           <i class="fi fi-rs-tractor"></i>
           <div>
-            <h3>Why Us?</h3>
-            <p class="why-chosen-text">
+            <h3 data-i18n="why-us">Why Us?</h3>
+            <p class="why-chosen-text" data-i18n="why-us-text">
               We serve smaller contractors as well as medium and large companies in a cross section of industries, Mining, Construction, Engineering etc
             </p>
           </div>            
@@ -272,68 +267,67 @@
 
        <!-- SECOND ROW SERVICES CARDS -->
        <div class="heading-section">
-        <h1>Our Products</h1>
+        <h1 data-i18n="products">Our Products</h1>
         <div class="stylish-line"></div>
       </div>
-       <div class="services-section-wrapper second-row">
+      <div class="services-section-wrapper second-row">
         <div class="card background-card5">
           <div>
-            <h3>Barriers & Bollards</h3>
+            <h3 data-i18n="barriers_bollards">Barriers & Bollards</h3>
           </div>
-         </div>
-
-         <div class="card background-card6">
+        </div>
+      
+        <div class="card background-card6">
           <div>
-            <h3>Bridge Beams</h3>
-          </div>            
-         </div>
-
-         <div class="card background-card7">
+            <h3 data-i18n="bridge_beams">Bridge Beams</h3>
+          </div>
+        </div>
+      
+        <div class="card background-card7">
           <div>
-            <h3>Columns, Beams, Slabs & Staircases</h3>
-          </div>            
-         </div>
-
-         <div class="card background-card8">
+            <h3 data-i18n="columns_beams_slabs_staircases">Columns, Beams, Slabs & Staircases</h3>
+          </div>
+        </div>
+      
+        <div class="card background-card8">
           <div>
-            <h3>Light Castings</h3>
-          </div>            
-         </div>
-       </div>
-
-       <!-- THIRD ROW -->
-       <div class="services-section-wrapper second-row">
+            <h3 data-i18n="light_castings">Light Castings</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- THIRD ROW -->
+      <div class="services-section-wrapper second-row">
         <div class="card background-card9">
           <div>
-            <h3>Hollow-Core Decking & Walling</h3>
+            <h3 data-i18n="hollow_core_decking_walling">Hollow-Core Decking & Walling</h3>
           </div>
-         </div>
-
-         <div class="card background-card10">
+        </div>
+      
+        <div class="card background-card10">
           <div>
-            <h3>Kerbs, Channels & Drains</h3>
-          </div>            
-         </div>
-
-         <div class="card background-card11">
+            <h3 data-i18n="kerbs_channels_drains">Kerbs, Channels & Drains</h3>
+          </div>
+        </div>
+      
+        <div class="card background-card11">
           <div>
-            <h3>Lighting & Transmission Poles</h3>
-          </div>            
-         </div>
-
-         <div class="card background-card12">
+            <h3 data-i18n="lighting_transmission_poles">Lighting & Transmission Poles</h3>
+          </div>
+        </div>
+      
+        <div class="card background-card12">
           <div>
-            <h3>Specialized Castings</h3>
-          </div>            
-         </div>
-       </div>
+            <h3 data-i18n="specialized_castings">Specialized Castings</h3>
+          </div>
+        </div>
       </div>
     </section>
     <section id="gallery-section">
      <div class="gallery-wrapper">
 
       <div class="heading-section">
-        <h1>Our Gallery</h1>
+        <h1 data-i18n="gallery">Our Gallery</h1>
         <div class="stylish-line"></div>
       </div>
 
@@ -368,14 +362,14 @@
       <div class="testimonial-section-container">
         <div class="testimonial-section-wrapper">
           <div class="about-headings">
-            <h1>What They Say About Us</h1>
+            <h1 data-i18n="what-they-say">What They Say About Us</h1>
             <div class="stylish-line"></div>
           </div>
           <div class="testimonial-card">
             <i class="ri-double-quotes-l"></i>
             <div class="changing-testimonials">
               <h3 id="testimonial-name">Mercy</h3>
-              <p id="testimonial-text">
+              <p id="testimonial-text" data-i18n="mercy-testimonial">
                 Working with Hawker Siddeley has been a game-changer for our projects. Their technical expertise, attention to detail, and commitment to delivering on time exceeded our expectations. From precision machining to reliable solutions, they've become an invaluable partner for our operations.
               </p>
             </div>
@@ -391,7 +385,7 @@
      <div class="our-patners-section-container">
       <div class="our-partners-section-wrapper">
         <div class="heading-section">
-          <h1>Our Partners</h1>
+          <h1 data-i18n="our-partners">Our Partners</h1>
           <div class="stylish-line"></div>
         </div>
 
@@ -408,7 +402,7 @@
     <section id="contact-section">
      <div class="contact-container">
       <div class="heading-section">
-        <h1>Contact Us In One Click</h1>
+        <h1 data-i18n="contact_section">Contact Us In One Click</h1>
         <div class="stylish-line"></div>
       </div>
       <div class="contact-wrapper">
@@ -426,22 +420,22 @@
        <div class="footer-wrapper">
          <div class="first-column">
            <a href="#"><div class="footer-logo"></div></a>
-           <p class="call-to-action">
+           <p class="call-to-action" data-i18n="call_to_action">
             Ready to Partner with Us?
             Let's bring your vision to life. Contact us today to discuss your needs or visit our location to see how we can help!
            </p>
          </div>
 
          <div class="second-column">
-          <h3>Sections</h3>
-          <a href="#home-section"><p>Home</p></a>
-          <a href="#about-section"><p>About Us</p></a>
-          <a href="#services-section"><p>Services</p></a>
-          <a href="#contact-section"><p>Contact</p></a>
+          <h3 data-i18n="sections">Sections</h3>
+          <a href="#home-section"><p data-i18n="home">Home</p></a>
+          <a href="#about-section"><p data-i18n="about">About Us</p></a>
+          <a href="#services-section"><p data-i18n="services">Services</p></a>
+          <a href="#contact-section"><p data-i18n="contact">Contact</p></a>
          </div>
 
          <div class="third-column">
-          <h3>Get In Touch</h3>
+          <h3 data-i18n="get_in_touch">Get In Touch</h3>
           <a href="https://www.google.com/maps/@-17.8308467,31.0484341,16.31z?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"><p><i class="ri-map-pin-line"></i> 12.125 Samora Machel, N4, Matola</p></a>
           <a href="tel:+258870210002"><p><i class="ri-phone-line"></i> +258 861 058 118/ 870 210 002</p></a>
           <a href="mailto:sales@hawkersiddeleygroup.com"><p><i class="ri-mail-line"></i> sales@hawkersiddeleygroup.com</p></a>
@@ -449,7 +443,7 @@
          </div>
 
          <div class="fouth-column">
-          <h3>Socials</h3>
+          <h3 data-i18n="socials">Socials</h3>
           <a href="#"><i class="ri-facebook-box-fill"></i></a>
           <a href="#"><i class="ri-twitter-x-line"></i></a>
           <a href="#"><i class="ri-linkedin-box-fill"></i></a>

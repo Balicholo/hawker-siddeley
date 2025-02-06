@@ -50,30 +50,17 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const testimonials = [
-    {
-      name: "Mercy",
-      text: "Hawker Siddeley's precision and reliability transformed our projects. Their expertise, attention to detail, and timely delivery exceeded all expectations. A truly invaluable partner for our operations.",
-    },
-    {
-      name: "John",
-      text: "Exceptional service! Hawker Siddeley's technical skills and commitment to precision machining made them our go-to partner. They consistently deliver quality solutions, right on time.",
-    },
-    {
-      name: "Tinashe",
-      text: "Partnering with Hawker Siddeley has been incredible. Their innovative machining solutions, professional team, and dedication to excellence make them a standout choice for any project.",
-    },
-  ];
-
   const nameElement = document.getElementById("testimonial-name");
   const textElement = document.getElementById("testimonial-text");
   const leftButton = document.getElementById("nav-left");
   const rightButton = document.getElementById("nav-right");
   const testimonialContainer = document.querySelector(".changing-testimonials");
+  const languageSwitcher = document.getElementById("language-switcher");
 
   let currentIndex = 0;
+  let testimonials = [];
 
-  const updateTestimonial = (direction) => {
+  function updateTestimonial() {
     // Apply sliding out effect
     testimonialContainer.classList.add("slide-out");
 
@@ -96,22 +83,73 @@ document.addEventListener("DOMContentLoaded", () => {
       rightButton.style.color =
         currentIndex === testimonials.length - 1 ? "grey" : "rgb(255, 68, 0)";
     }, 500); // Matches the slide-out animation duration
-  };
+  }
+
+  function loadTestimonials(language) {
+    fetch(`./lang/${language}.json`)
+      .then(response => response.json())
+      .then(data => {
+        testimonials = [
+          data.testimonial1,
+          data.testimonial2,
+          data.testimonial3
+        ];
+        updateTestimonial();
+      });
+  }
+
+  function changeLanguage(event) {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem('language', selectedLanguage);
+    loadTestimonials(selectedLanguage);
+  }
+
+  languageSwitcher.addEventListener("change", changeLanguage);
 
   leftButton.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
-      updateTestimonial("left");
+      updateTestimonial();
     }
   });
 
   rightButton.addEventListener("click", () => {
     if (currentIndex < testimonials.length - 1) {
       currentIndex++;
-      updateTestimonial("right");
+      updateTestimonial();
     }
   });
 
-  // Initial setup
-  updateTestimonial();
+  // On page load, set the language and load testimonials
+  const storedLanguage = localStorage.getItem('language') || 'en';
+  languageSwitcher.value = storedLanguage;
+  loadTestimonials(storedLanguage);
+});
+// TRANSLATION
+const languageSwitcher = document.getElementById("language-switcher");
+
+function changeLanguage(event) {
+  const selectedLanguage = event.target.value;
+  localStorage.setItem('language', selectedLanguage);
+  loadLanguage(selectedLanguage);
+}
+
+function loadLanguage(language) {
+  fetch(`./lang/${language}.json`)
+    .then(response => response.json())
+    .then(data => {
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (data[key]) {
+          element.textContent = data[key];
+        }
+      });
+    });
+}
+
+// On page load, set the language
+document.addEventListener("DOMContentLoaded", () => {
+  const storedLanguage = localStorage.getItem('language') || 'en';
+  languageSwitcher.value = storedLanguage;
+  loadLanguage(storedLanguage);
 });

@@ -114,7 +114,31 @@ nav {
     background-color: rgb(0, 0, 71);
     box-shadow: 0px 0px 10px rgba(20, 20, 20, 0.3);
 }
+/* LANGUAGE BUTTONS */
+#language-switcher {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none; /* Blue border */
+    border-radius: 8px;
+    background-color: rgb(255, 68, 0);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #language-switcher:hover {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  #language-switcher:focus {
+    outline: none;
+    box-shadow: rgb(255, 68, 0);
+    cursor: pointer;
+  }
 
+  
 .nav-menu {
     position: fixed; /* Stay in place on scroll */
     top: 0; /* Start from the top of the viewport */
